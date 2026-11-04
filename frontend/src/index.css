@@ -1,0 +1,35 @@
+/* Estilos globais: importa o Tailwind e define as cores da marca Gestão Pro. */
+
+/* Esta linha traz TODAS as classes do Tailwind (ex.: "bg-white", "p-4", "text-sm"). */
+@import 'tailwindcss';
+
+/*
+ * @theme cria "tokens" de design. Cada cor definida aqui vira classes prontas:
+ * --color-brand-600 → bg-brand-600, text-brand-600, border-brand-600...
+ * Assim, trocar a cor da marca é mudar só este bloco.
+ */
+@theme {
+  /* Azul-marinho em tons opacos (foscos), escolhido pelo usuário na Etapa 10.
+     Os tons claros (50–200) servem de fundo suave; 600 é o tom dos gráficos (validado:
+     contraste ≥ 3:1 e saturação suficiente para não parecer cinza); 700 é o dos botões;
+     900–950 são os fundos escuros (menu lateral, painel do login). */
+  --color-brand-50: #f3f6fb;
+  --color-brand-100: #e4eaf4;
+  --color-brand-200: #c9d5e8;
+  --color-brand-300: #a0b4d4;
+  --color-brand-400: #7590bd;
+  --color-brand-500: #4f6fa3;
+  --color-brand-600: #2b4f8f;
+  --color-brand-700: #213f74;
+  --color-brand-800: #1a325c;
+  --color-brand-900: #142746;
+  --color-brand-950: #0c1830;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  /* Fundo branco levemente acinzentado (o usuário aprovou o fundo claro). */
+  @apply bg-zinc-50 text-zinc-800 antialiased;
+  font-feature-settings: 'cv11', 'ss01';
+}

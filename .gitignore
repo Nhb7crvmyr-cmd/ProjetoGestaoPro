@@ -1,0 +1,27 @@
+# Arquivos que NUNCA devem ir para o GitHub.
+
+# Dependências e builds (recriados com "npm install" / "npm run build")
+node_modules/
+dist/
+cdk.out/
+cdk.context.json
+
+# Variáveis de ambiente (podem conter dados da sua conta AWS)
+.env
+.env.*
+!.env.example
+
+# Credenciais e chaves
+*.pem
+*.key
+.aws/
+
+# Sistema e editores
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Instruções internas do assistente (ficam só no computador)
+CLAUDE.md
+.claude/
